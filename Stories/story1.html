@@ -4,46 +4,64 @@ Le courageux chevalier fonce vers le donjon pour affronter le terrible dragon ro
 
 -->
 
-<sceneaudio type="variable" criterion="character">
-  <option criterion="chevalier" srcfile="/Audio/SceneAudio/chevalier_bruit_epee.mp3"></option>
-  <option criterion="pirate" srcfile="/Audio/SceneAudio/pirate_cri.mp3"></option>
+<sceneaudio variable=1 criterion="character">
+<option criterion="astronaute" srcfile="/Audio/SceneAudio/astronaute_bruit_oxygen.mp3"></option>
+<option criterion="pirate" srcfile="/Audio/SceneAudio/pirate_cri.mp3"></option>
 </sceneaudio>
 
 <cleardrawings></cleardrawings>
 
-<scenedrawing type="variable" criterion="character">
-  <option criterion="chevalier" srcfile="/Drawings/chevalier_epee_degainee.png"></option>
-  <option criterion="pirate" srcfile="/Drawings/pirate_pistolet_sorti.png"></option>
+<scenedrawing variable=1 criterion="character">
+<option criterion="astronaute" srcfile="/Drawings/astronaute_position_combat.png" x="6" y="15"></option>
+<option criterion="pirate" srcfile="/Drawings/pirate_pistolet_sorti.png" x="7" y="75"></option>
 </scenedrawing>
 
-<scenedrawing type="variable" criterion="context">
-  <option criterion="jungle" srcfile="/Drawings/temple_jungle.png"></option>
-  <option criterion="moyen-age" srcfile="/Drawings/donjon.png"></option>
+<scenedrawing variable=1 criterion="context">
+<option criterion="jungle" srcfile="/Drawings/temple_jungle.png" x="8" y="18"></option>
+<option criterion="moyen-age" srcfile="/Drawings/donjon.png" x="4" y="5"></option>
 </scenedrawing>
 
-<scenedrawing type="basic" srcfile="/Drawings/tresor.png" x="5" y="15"></scenedrawing>
-<scenedrawing type="basic" srcfile="/Drawings/donjon.png" x="18" y="415"></scenedrawing>
-<scenedrawing type="basic" srcfile="/Drawings/drawing.png" x="8" y="45"></scenedrawing>
+<scenedrawing variable=0 srcfile="/Drawings/tresor.png" x="5" y="15"></scenedrawing>
+<scenedrawing variable=0 srcfile="/Drawings/drawing.png" x="8" y="45"></scenedrawing>
 
-<textstory type="variable" criterion="gender">
-  <option criterion="m" srcfile="/Audio/TextAudio/le_courageux.mp3">Le courageux</option>
-  <option criterion="f" srcfile="/Audio/TextAudio/la_courageuse.mp3">La courageuse</option>
+<textstory variable=1 criterion="gender">
+<option criterion="m" srcfile="/Audio/TextAudio/le_courageux.mp3">Le courageux</option>
+<option criterion="f" srcfile="/Audio/TextAudio/la_courageuse.mp3">La courageuse</option>
 </textstory>
 
-<textstory type="variable" criterion="character">
-  <option criterion="chevalier" srcfile="/Audio/TextAudio/chevalier.mp3">chevalier</option>
-  <option criterion="pirate" srcfile="/Audio/TextAudio/pirate.mp3">pirate</option>
+<textstory variable=1 criterion="character">
+<option criterion="astronaute" srcfile="/Audio/TextAudio/astronaute.mp3">astronaute</option>
+<option criterion="pirate" srcfile="/Audio/TextAudio/pirate.mp3">pirate</option>
 </textstory>
 
-<textstory type="basic" srcfile="/Audio/TextAudio/fonce_vers.mp3">fonce vers</textstory>
+<textstory variable=0 srcfile="/Audio/TextAudio/fonce_vers.mp3">fonce vers</textstory>
 
-<textstory type="variable" criterion="context">
-  <option criterion="jungle" srcfile="/Audio/TextAudio/le-temple.mp3">le temple</option>
-  <option criterion="moyen-age" srcfile="/Audio/TextAudio/le-donjon.mp3">le donjon</option>
+<textstory variable=1 criterion="context">
+<option criterion="jungle" srcfile="/Audio/TextAudio/le-temple.mp3"> le temple de la jungle</option>
+<option criterion="moyen-age" srcfile="/Audio/TextAudio/le-donjon.mp3"> le donjon</option>
 </textstory>
 
-<textstory type="basic" srcfile="/Audio/TextAudio/pour_affronter_le_dragon.mp3">pour affronter le terrible dragon rouge, afin de récuperer son trésor.</textstory>
+<textstory variable=0 srcfile="/Audio/TextAudio/pour_affronter.mp3">pour affronter </textstory>
+
+<sceneaudio variable=1 criterion="context">
+<option criterion="jungle" srcfile="/Audio/SceneAudio/cri_pathere.mp3"></option>
+<option criterion="moyen-age" srcfile="/Audio/SceneAudio/cri_dragon.mp3"></option>
+</sceneaudio>
+
+<scenedrawing variable=1 criterion="context">
+<option criterion="jungle" srcfile="/Drawings/panthere_noire.png" x="9" y="25"></option>
+<option criterion="moyen-age" srcfile="/Drawings/dragon_rouge.png" x="78" y="56"></option>
+</scenedrawing>
+
+<textstory variable=1 criterion="context">
+<option criterion="jungle" srcfile="/Audio/TextAudio/la_terrifiante_pathère_noire.mp3">la terrible panthère noire</option>
+<option criterion="moyen-age" srcfile="/Audio/TextAudio/le_terrible_dragon_rouge.mp3">le terrible dragon rouge</option>
+</textstory>
+
+<textstory variable=0 srcfile="/Audio/TextAudio/afin_de_recuperer_tresor.mp3"> afin de récupérer son trésor.</textstory>
 
 <pause></pause>
+
+<clearaudio></clearaudio>
 
 <cleardrawings></cleardrawings>
