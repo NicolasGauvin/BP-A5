@@ -14,87 +14,28 @@ var character = "astronaute";
 var gender = "m";
 var context = "jungle";
 
-var queueTreatmentFunctions = {
-  "SCENEAUDIO" : function (el){
-
-
-      if(el.getAttribute("variable") == "1"){
-
-        for (var i = 0 ; i < el.children.length ; i++){
-
-          var children = el.children[i];
-          if(children.getAttribute("criterion") == window[el.getAttribute("criterion")]){
-
-            return {"type":"sceneaudio","srcfile":children.getAttribute("srcfile")}
-
-          }
-
-        }
-
-      }else{
-
-        return {"type":"sceneaudio","srcfile":el.getAttribute("srcfile")}
-
-      }
-  },
-  "SCENEDRAWING" : function (el){
-
-    if(el.getAttribute("variable") == "1"){
-
-      for (var i = 0 ; i < el.children.length ; i++){
-
-        var children = el.children[i];
-        if(children.getAttribute("criterion") == window[el.getAttribute("criterion")]){
-
-          return {"type":"drawing","x":children.getAttribute("x"),"y":children.getAttribute("y"),"srcfile":children.getAttribute("srcfile")}
-
-        }
-
-      }
-
-    }else{
-
-      return {"type":"drawing","x":el.getAttribute("x"),"y":el.getAttribute("y"),"srcfile":el.getAttribute("srcfile")}
-
-    }
-  },
-  "TEXTSTORY" : function (el){
-
-    if(el.getAttribute("variable") == "1"){
-
-      for (var i = 0 ; i < el.children.length ; i++){
-
-        var children = el.children[i];
-        if(children.getAttribute("criterion") == window[el.getAttribute("criterion")]){
-
-          return {"type":"textstory","srcfile":children.getAttribute("srcfile"),"text":children.innerHTML}
-
-        }
-
-      }
-
-    }else{
-
-      return {"type":"textstory","srcfile":el.getAttribute("srcfile"), "text":el.innerHTML}
-
-    }
-  },
-  "PAUSE" : function (el){
-    return {"type":"pause"}
-  },
-  "CLEARDRAWINGS" : function (el){
-    return {"type":"cleardrawings"}
-  },
-  "CLEARAUDIO" : function (el){
-    return {"type":"clearaudio"}
-  }
-}
-
 function parseStory(){
   var storyHtmlChildren = document.querySelector("#story").children;
-  console.log(storyHtmlChildren);
   for (var a = 0 ; a < storyHtmlChildren.length ; a++){
-    console.log(queueTreatmentFunctions[storyHtmlChildren[a].nodeName](storyHtmlChildren[a]));
+    var action = {};
+    var selectedNode;
+    if(storyHtmlChildren[a].nodeName == "VARIABLE"){
+      for (var i = 0 ; i < storyHtmlChildren[a].children.length ; i++){
+        if(storyHtmlChildren[a].children[i].getAttribute("criterion") == window[storyHtmlChildren[a].getAttribute("criterion")]){
+          action.type = storyHtmlChildren[a].children[i].nodeName;
+          selectedNode = storyHtmlChildren[a].children[i];
+        }
+      }
+    }else{
+      action.type = storyHtmlChildren[a].nodeName;
+      selectedNode = storyHtmlChildren[a];
+    }
+    for (var j = 0; j < selectedNode.attributes.length; j++){
+      if(selectedNode.attributes[j].name !== "criterion"){
+        action[selectedNode.attributes[j].name] = selectedNode.attributes[j].value;
+      }
+    }
+    console.log(action);
     console.log("--------------------")
   }
 }
