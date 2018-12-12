@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5186a6b0-6cd1-480c-a5d8-ff3e562e3b34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/audio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visual.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Story-Parser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BP-A5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storyParser.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storyParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/storyParser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stories/story1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Stories/story1.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,23 +56,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="html" value="1" />
           <entry key="js" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="1" />
           <entry key="JavaScript" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="18" />
+          <entry key="html" value="27" />
           <entry key="js" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="18" />
+          <entry key="HTML" value="27" />
           <entry key="JavaScript" value="37" />
         </counts>
       </usages-collector>
@@ -88,7 +82,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storyParser.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
@@ -102,6 +96,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Stories/story1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -164,6 +167,7 @@
         <option value="$PROJECT_DIR$/visual.js" />
         <option value="$PROJECT_DIR$/audio.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Stories/story1.html" />
       </list>
     </option>
   </component>
@@ -190,6 +194,11 @@
             <path>
               <item name="BP-A5" type="b2602c69:ProjectViewProjectNode" />
               <item name="BP-A5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BP-A5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BP-A5" type="462c0819:PsiDirectoryNode" />
+              <item name="Stories" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -226,12 +235,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544628371672</updated>
       <workItem from="1544628374444" duration="712000" />
-      <workItem from="1544633342220" duration="455000" />
+      <workItem from="1544633342220" duration="1070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1167000" />
+    <option name="totallyTimeSpent" value="1782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
@@ -283,6 +292,13 @@
     <entry file="file://$PROJECT_DIR$/audio.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/storyParser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/visual.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -293,10 +309,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storyParser.js">
+    <entry file="file://$PROJECT_DIR$/Stories/story1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        <state relative-caret-position="1003">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
         </state>
       </provider>
     </entry>
