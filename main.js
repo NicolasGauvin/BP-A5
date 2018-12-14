@@ -14,4 +14,4 @@ function setUpStoryHtml(storyPath){
 	xhr.send();
 }
 
-setUpStoryHtml('./Stories/story1.html');
+setUpStoryHtml(settings.storyPath);
