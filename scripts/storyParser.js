@@ -1,7 +1,8 @@
 //transforming the HTML of the story into an exploitable queue
 function parseStory() {
 	//list of actions to do
-	const queue = [];
+	const drawingQueue = [];
+	const audioAndTextQueue = [];
 	const sceneList = document.querySelector("#story").children;
 	//going through all elements of the story's html to find the right element to add to the queue
 	for (let u = 0; u < sceneList.length; u++) {
@@ -34,7 +35,14 @@ function parseStory() {
 			}
 			sceneQueue.push(queueAction);
 		}
-		queue.push(sceneQueue);
-	}	
-	return queue;
+		let sceneDrawings = sceneQueue.filter(obj => {
+			return obj.type === "SCENEDRAWING";
+		});
+		drawingQueue.push(sceneDrawings);
+		let sceneAudioAndText = sceneQueue.filter(obj => {
+			return obj.type === "SCENEDRAWING";
+		});
+		audioAndTextQueue.push(sceneAudioAndText);
+	}
+	return {"drawingQueue" : drawingQueue,"audioAndTextQueue" : audioAndTextQueue};
 }

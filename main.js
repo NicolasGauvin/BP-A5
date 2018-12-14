@@ -1,4 +1,5 @@
 let queue;
+let currentScene = 0;
 
 //get the html from the story and puts it on the page
 function setUpStoryHtml(storyPath){
@@ -9,13 +10,15 @@ function setUpStoryHtml(storyPath){
 		if (this.status!==200) return;
 		document.querySelector("#story").innerHTML = this.responseText;
 		queue = parseStory();
-		treatQueue(queue);
+		setUpScene();
 	};
 	xhr.send();
 }
 
-function treatQueue(){
-	console.log(queue);
+function setUpScene(){
+	for (let  i = 0; i < queue.drawingQueue[currentScene].length; i++){
+		addDrawing(queue.drawingQueue[currentScene][i]);
+	}
 }
 
 setUpStoryHtml(settings.storyPath);
