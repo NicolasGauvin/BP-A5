@@ -9,9 +9,13 @@ function setUpStoryHtml(storyPath){
 		if (this.status!==200) return;
 		document.querySelector("#story").innerHTML = this.responseText;
 		queue = parseStory();
-		console.log(queue);
+		treatQueue(queue);
 	};
 	xhr.send();
+}
+
+function treatQueue(){
+	console.log(queue);
 }
 
 setUpStoryHtml(settings.storyPath);
