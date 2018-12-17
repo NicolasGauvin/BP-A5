@@ -21,4 +21,9 @@ function setUpScene(){
 	}
 }
 
-setUpStoryHtml(settings.storyPath);
+function setSettings(){
+	settings.gender = document.getElementById("gender").value;
+	settings.character = document.getElementById("character").value;
+	settings.context = document.getElementById("context").value;
+	setUpStoryHtml(settings.storyPath);
+}

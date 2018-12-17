@@ -1,4 +1,21 @@
-<!--This is a comment. Comments are not displayed in the browser-->
+<!-- temporary form for settings -->
+<form>
+	<label for="gender">Gender</label><select id="gender">
+		<option value="m">M</option>
+		<option value="f">F</option>
+	</select>
+	<label for="character">Character</label><select id="character">
+		<option value="pirate">pirate</option>
+		<option value="astronaute">astronaute</option>
+	</select>
+	<label for="context">Context</label><select id="context">
+		<option value="jungle">jungle</option>
+		<option value="moyen-age">moyen-age</option>
+	</select>
+	<button type='button' onClick="setSettings()">Save</button>
+</form>
+
+<!-- holder for the story (should be hidden) -->
 <div id="story" style="display:none"></div>
 
 <!--Importing all scripts-->
