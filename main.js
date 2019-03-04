@@ -10,15 +10,15 @@ function setUpStoryHtml(storyPath){
 		if (this.status!==200) return;
 		document.querySelector("#story").innerHTML = this.responseText;
 		queue = parseStory();
+		console.log(queue);
 		setUpScene();
 	};
 	xhr.send();
 }
 
 function setUpScene(){
-	for (let  i = 0; i < queue.drawingQueue[currentScene].length; i++){
-		addDrawing(queue.drawingQueue[currentScene][i]);
-	}
+	clearScene();
+	addDrawings(queue.drawingQueue[currentScene]);
 }
 
 function setSettings(){
