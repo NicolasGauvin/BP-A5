@@ -27,22 +27,26 @@ function parseStory() {
 				queueAction.type = sceneElements[a].nodeName;
 				selectedElement = sceneElements[a];
 			}
-			//get all attributes from the relevant node (except the criterion) and push the result it to the queue
-			for (let j = 0; j < selectedElement.attributes.length; j++) {
-				if (selectedElement.attributes[j].name !== "criterion") {
-					queueAction[selectedElement.attributes[j].name] = selectedElement.attributes[j].value;
+			//in the case of a variable element, we check if there was a relevant element to pick
+			if (selectedElement !== undefined){
+				//get all attributes from the relevant node (except the criterion) and push the result it to the queue
+				for (let j = 0; j < selectedElement.attributes.length; j++) {
+					if (selectedElement.attributes[j].name !== "criterion") {
+						queueAction[selectedElement.attributes[j].name] = selectedElement.attributes[j].value;
+					}
 				}
+				sceneQueue.push(queueAction);
 			}
-			sceneQueue.push(queueAction);
 		}
 		let sceneDrawings = sceneQueue.filter(obj => {
 			return obj.type === "SCENEDRAWING";
 		});
 		drawingQueue.push(sceneDrawings);
-		let sceneAudioAndText = sceneQueue.filter(obj => {
+		/*let sceneAudioAndText = sceneQueue.filter(obj => {
 			return obj.type === "SCENEDRAWING";
 		});
 		audioAndTextQueue.push(sceneAudioAndText);
+		*/
 	}
 	return {"drawingQueue" : drawingQueue,"audioAndTextQueue" : audioAndTextQueue};
 }

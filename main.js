@@ -27,6 +27,7 @@ function setSettings(){
 }
 
 function startStory(){
+	currentScene = 0;
 	setSettings();
 	setUpStoryHtml(settings.storyPath);
 }
