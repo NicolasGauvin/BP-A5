@@ -1,3 +1,6 @@
+Run server with "http-server"
+You will first need to have nod einstalled and to do "npm install-g http-server"
+
 Syntax
 
 "<scene></scene>"
