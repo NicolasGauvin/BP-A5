@@ -10,7 +10,6 @@ function setUpStoryHtml(storyPath){
 		if (this.status!==200) return;
 		document.querySelector("#story").innerHTML = this.responseText;
 		queue = parseStory();
-		console.log(queue);
 		setUpScene();
 	};
 	xhr.send();
@@ -18,11 +17,16 @@ function setUpStoryHtml(storyPath){
 
 function setUpScene(){
 	clearScene();
-	addDrawings(queue.drawingQueue[currentScene]);
+	currentScene++;
+	handleDrawings(queue.drawingQueue[currentScene - 1]);
 }
 
 function setSettings(){
 	settings.character = document.getElementById("character").value;
 	settings.context = document.getElementById("context").value;
+}
+
+function startStory(){
+	setSettings();
 	setUpStoryHtml(settings.storyPath);
 }
