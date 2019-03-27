@@ -1,6 +1,9 @@
 //HTML CANVAS
-let canvas = document.getElementById('canvas'),
-	context = canvas.getContext('2d');
+const canvas = document.getElementById('canvas'),
+	context = canvas.getContext('2d'),
+	canvasLeft = canvas.offsetLeft,
+	canvasTop = canvas.offsetTop,
+	clickableElements = [];
 
 //Cleaning the canvas between scenes
 function clearScene(){
@@ -11,12 +14,38 @@ function handleDrawings(drawings){
 	for (let a =0;a < drawings.length; a++){
 		addDrawing(drawings[a]);
 	}
+	console.log(clickableElements);
+	// Render elements.
+	clickableElements.forEach(function(element) {
+		context.fillStyle = "rgba(243, 1, 1, 0.62)";
+		context.fillRect(element.x, element.y, element.width, element.height);
+	});
 }
 
 function addDrawing(drawing){
 	let base_image = new Image();
 	base_image.src = "." + drawing.srcfile;
 	base_image.onload = function(){
-		context.drawImage(base_image, drawing.x, drawing.y, drawing.height, drawing.width);
-	}
+		context.drawImage(base_image, drawing.x, drawing.y, drawing.width, drawing.height);
+	};
+	
+	clickableElements.push(drawing);
 }
+
+canvas.addEventListener('click', function(event) {
+	const x = event.pageX - canvasLeft,
+		y = event.pageY - canvasTop;
+	
+	let clickedElement;
+	clickableElements.forEach(function(element) {
+		if ((y > parseInt(element.y) && y < parseInt(element.y) + parseInt(element.height)) && (x > parseInt(element.x) && x < parseInt(element.x) + parseInt(element.width))) {
+			clickedElement = element;
+		}
+	});
+	
+	if(clickedElement !== undefined){
+		console.log("clicked element:");
+		console.log(clickedElement);
+	}
+	
+}, false);
