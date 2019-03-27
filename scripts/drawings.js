@@ -14,12 +14,6 @@ function handleDrawings(drawings){
 	for (let a =0;a < drawings.length; a++){
 		addDrawing(drawings[a]);
 	}
-	console.log(clickableElements);
-	// Render elements.
-	clickableElements.forEach(function(element) {
-		context.fillStyle = "rgba(243, 1, 1, 0.62)";
-		context.fillRect(element.x, element.y, element.width, element.height);
-	});
 }
 
 function addDrawing(drawing){
@@ -28,8 +22,9 @@ function addDrawing(drawing){
 	base_image.onload = function(){
 		context.drawImage(base_image, drawing.x, drawing.y, drawing.width, drawing.height);
 	};
-	
-	clickableElements.push(drawing);
+	if (drawing.clickable === "1"){
+		clickableElements.push(drawing);
+	}
 }
 
 canvas.addEventListener('click', function(event) {
