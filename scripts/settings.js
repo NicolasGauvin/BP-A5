@@ -1,3 +1,4 @@
+//base settings for the script
 const settings = {
 	character : "astronaute",
 	context : "jungle2azelkjzea",
