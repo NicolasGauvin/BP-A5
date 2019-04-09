@@ -34,5 +34,5 @@ function startStory(){
 
 var socket = io.connect('http://localhost');
 socket.on('button_information', function (data) {
-	console.log(data);
+	//console.log(data);
 });

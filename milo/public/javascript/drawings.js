@@ -16,6 +16,7 @@ function handleDrawings(drawings){
 	for (let a =0;a < drawings.length; a++){
 		addDrawing(drawings[a]);
 	}
+	console.log(drawings)
 }
 
 //add a drawing to the canvas
