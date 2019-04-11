@@ -1,29 +1,34 @@
-//HTML CANVAS
-const canvas = document.getElementById('canvas'),
-	context = canvas.getContext('2d'),
-	canvasX = canvas.offsetLeft,
-	canvasY = canvas.offsetTop,
+
 	//map of the position of clickable elements in the canvas, used for click detection
-	clickableElements = [];
+	const clickableElements = [],
+	//list of canvases for every image
+	canvasList = [],
+	canvasesHolder = document.querySelector("#canvasesHolder");
 
 //Cleaning the canvas between scenes
 function clearScene(){
-	context.clearRect(0, 0, canvas.width, canvas.height);
+	//context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 //draw all drawings from a scene
 function handleDrawings(drawings){
 	for (let a =0;a < drawings.length; a++){
-		addDrawing(drawings[a]);
+		addDrawing(drawings[a],a);
 	}
 	console.log(drawings)
 }
 
 //add a drawing to the canvas
-function addDrawing(drawing){
+function addDrawing(drawing, index){
 	let base_image = new Image();
 	base_image.src = "." + drawing.srcfile;
 	base_image.onload = function(){
+		const canvas = document.createElement('canvas'),
+			context = canvas.getContext("2d");
+		canvas.width = 1000;
+		canvas.height = 500;
+		canvas.style.zIndex = index;
+		canvasesHolder.appendChild(canvas);
 		context.drawImage(base_image, drawing.x, drawing.y, drawing.width, drawing.height);
 	};
 	//if the drawing is set as clickable, adds it to the list
@@ -33,6 +38,7 @@ function addDrawing(drawing){
 }
 
 //triggers event on every click on the  canvas
+/*
 canvas.addEventListener('click', function(event) {
 	//getting position of the click on the canvas
 	const clickX = event.pageX - canvasX,
@@ -54,3 +60,4 @@ canvas.addEventListener('click', function(event) {
 	}
 	
 }, false);
+*/
