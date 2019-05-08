@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "eslint": "^5.16.0",
     "python-shell": "^1.0.7"
+  },
+  "devDependencies": {
+    "eslint-plugin-promise": "^4.1.1"
   }
 }
