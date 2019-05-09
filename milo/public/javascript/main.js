@@ -16,10 +16,13 @@ function setUpStoryHtml(storyPath){
 }
 
 function setUpScene(){
-	clearScene();
-	//handleDrawings(queue.drawingQueue[currentScene]);
-	handleText(queue.audioAndTextQueue[currentScene]);
-	currentScene++;
+	if(queue.drawingQueue[currentScene]){
+		clearScene();
+		//handleDrawings(queue.drawingQueue[currentScene]);
+		handleText(queue.audioAndTextQueue[currentScene]);
+		handleTextAudio(queue.audioAndTextQueue[currentScene]);
+		currentScene++;
+	}
 }
 
 function setSettings(){

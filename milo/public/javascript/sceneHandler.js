@@ -3,6 +3,9 @@ const canvasesHolder = document.querySelector("#canvasesHolder"),
 	canvasClickListener = document.querySelector("#canvasClickListener"),
 	canvasX = canvasClickListener.offsetLeft,
 	canvasY = canvasClickListener.offsetTop;
+let soundIndex = 0;
+let sceneTextAudioList;
+let currentTextAudio;
 
 //Cleaning the canvas between scenes
 function clearScene(){
@@ -71,4 +74,28 @@ function handleText(textList){
 		text += textElement.text;
 	});
 	console.log(text);
+}
+
+function playTextAudio(){
+	if(sceneTextAudioList[soundIndex]){
+		const sound = new Howl({
+			src: sceneTextAudioList[soundIndex].srcfile,
+			onend: function() {
+				soundIndex++;
+				playTextAudio();
+				currentTextAudio = null;
+			}
+		});
+		currentTextAudio = sound;
+		sound.play();
+	}
+}
+
+function handleTextAudio(textAudioList){
+	sceneTextAudioList = textAudioList;
+	soundIndex = 0;
+	if(currentTextAudio != null){
+		currentTextAudio.stop();
+	}
+	playTextAudio();
 }
