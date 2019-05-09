@@ -14,13 +14,15 @@
     <form>
       <label for="character">Character</label>
       <select id="character">
-        <option value="pirate">pirate</option>
-        <option value="astronaute">astronaute</option>
+	      <option value="pirate">Lucie la Pirate</option>
+	      <option value="prince">Arthur le Prince</option>
+	      <option value="renard">Milo le Renard</option>
       </select>
       <label for="context">Context</label>
       <select id="context">
-        <option value="jungle">jungle</option>
-        <option value="moyen-age">moyen-age</option>
+        <option value="foret">Fôret</option>
+	      <option value="ile">Île</option>
+	      <option value="chateau">Chateau</option>
       </select>
       <button type='button' onClick="setSettings()">Changer</button>
       <button type='button' onClick="startStory()">Commencer / Reset Histoire</button><br>
@@ -31,8 +33,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
   <script src="./javascript/settings.js" charset="utf-8"></script>
   <script src="./javascript/storyParser.js" charset="utf-8"></script>
-  <script src="./javascript/drawings.js" charset="utf-8"></script>
-  <script src="./javascript/audio.js" charset="utf-8"></script>
+  <script src="./javascript/sceneHandler.js" charset="utf-8"></script>
   <script src="./javascript/main.js" charset="utf-8"></script>
 <style>
   canvas{

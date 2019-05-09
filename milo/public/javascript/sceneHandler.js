@@ -63,3 +63,12 @@ canvasClickListener.addEventListener('click', function(event) {
 	}
 	
 }, false);
+
+
+function handleText(textList){
+	let text = "";
+	textList.forEach(function(textElement) {
+		text += textElement.text;
+	});
+	console.log(text);
+}

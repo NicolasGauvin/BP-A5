@@ -42,11 +42,10 @@ function parseStory() {
 			return obj.type === "SCENEDRAWING";
 		});
 		drawingQueue.push(sceneDrawings);
-		/*let sceneAudioAndText = sceneQueue.filter(obj => {
-			return obj.type === "SCENEDRAWING";
+		let sceneAudioAndText = sceneQueue.filter(obj => {
+			return obj.type === "TEXTSTORY";
 		});
 		audioAndTextQueue.push(sceneAudioAndText);
-		*/
 	}
 	return {"drawingQueue" : drawingQueue,"audioAndTextQueue" : audioAndTextQueue};
 }

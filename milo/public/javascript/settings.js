@@ -1,6 +1,6 @@
 //base settings for the script
 const settings = {
-	character : "astronaute",
-	context : "jungle2azelkjzea",
-	storyPath : './Stories/story1.html'
+	character : "pirate",
+	context : "ile",
+	storyPath : './Stories/missfrom.html'
 };

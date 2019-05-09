@@ -17,8 +17,9 @@ function setUpStoryHtml(storyPath){
 
 function setUpScene(){
 	clearScene();
+	//handleDrawings(queue.drawingQueue[currentScene]);
+	handleText(queue.audioAndTextQueue[currentScene]);
 	currentScene++;
-	handleDrawings(queue.drawingQueue[currentScene - 1]);
 }
 
 function setSettings(){
