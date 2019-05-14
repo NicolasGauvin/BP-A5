@@ -32,8 +32,8 @@ function addDrawing(drawing, index){
 	base_image.src = "." + drawing.srcfile;
 	const canvas = document.createElement('canvas'),
 		context = canvas.getContext("2d");
-	canvas.width = 1000;
-	canvas.height = 500;
+	canvas.width = 1440;
+	canvas.height = 864;
 	canvas.style.zIndex = index;
 	canvasesHolder.appendChild(canvas);
 	base_image.onload = function(){
@@ -67,6 +67,10 @@ canvasClickListener.addEventListener('click', function(event) {
 	
 }, false);
 
+/*
+canvasClickListener.getContext("2d").fillStyle = "#FF0000";
+canvasClickListener.getContext("2d").fillRect(0, 0, 1500, 1500);
+*/
 
 function handleText(textList){
 	let text = "";
