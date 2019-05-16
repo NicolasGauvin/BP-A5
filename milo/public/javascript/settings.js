@@ -1,6 +1,6 @@
 //base settings for the script
 const settings = {
-	character : "pirate",
-	context : "ile",
+	character : "prince",
+	context : "foret",
 	storyPath : './Stories/missfrom.html'
 };

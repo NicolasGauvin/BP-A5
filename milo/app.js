@@ -41,7 +41,7 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-const io = require('socket.io').listen(80);
+const io = require('socket.io').listen(8080);
 const {PythonShell} = require('python-shell');
 const buttonController = new PythonShell('./public/python/buttonController.py');
 const socketLimit = 1;

@@ -7,27 +7,10 @@
     <div id="img-holder" style="">
     </div>
     <div id="canvasesHolder">
-      <canvas id="canvasClickListener" width="1440" height="864" style="z-index: 1000;"></canvas>
+      <canvas id="canvasClickListener" width="800" height="480" style="z-index: 1000;"></canvas>
     </div>
     <!-- holder for the story (should be hidden) -->
     <div id="story" style="display:none"></div>
-
-    <form>
-      <label for="character">Character</label>
-      <select id="character">
-	      <option value="pirate">Lucie la Pirate</option>
-	      <option value="prince">Arthur le Prince</option>
-	      <option value="renard">Milo le Renard</option>
-      </select>
-      <label for="context">Context</label>
-      <select id="context">
-        <option value="foret">Fôret</option>
-	      <option value="ile">Île</option>
-	      <option value="chateau">Chateau</option>
-      </select>
-      <button type='button' onClick="startStory()">Commencer / Reset Histoire</button><br>
-      <button type='button' onClick="setUpScene()">Suivante</button>
-    </form>
 
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>

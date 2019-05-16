@@ -32,9 +32,11 @@ function setSettings(){
 
 function startStory(){
 	currentScene = 0;
-	setSettings();
+	//setSettings();
 	setUpStoryHtml(settings.storyPath);
 }
+
+startStory();
 
 var socket = io.connect('http://localhost');
 socket.on('button_information', function (data) {
