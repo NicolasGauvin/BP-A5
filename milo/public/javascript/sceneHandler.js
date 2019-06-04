@@ -6,6 +6,7 @@ const canvasesHolder = document.querySelector("#canvasesHolder"),
 let soundIndex = 0;
 let sceneTextAudioList;
 let currentTextAudio;
+const textDiv = document.querySelector("#text");
 
 //Cleaning the canvas between scenes
 function clearScene(){
@@ -73,9 +74,11 @@ function handleText(textList){
 		text += textElement.text;
 	});
 	console.log(text);
+	textDiv.innerHTML = text;
 }
 
 function playTextAudio(){
+	console.log(sceneTextAudioList);
 	if(sceneTextAudioList[soundIndex]){
 		const sound = new Howl({
 			src: sceneTextAudioList[soundIndex].srcfile,
