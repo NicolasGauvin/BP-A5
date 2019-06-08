@@ -78,7 +78,6 @@ function handleText(textList){
 }
 
 function playTextAudio(){
-	console.log(sceneTextAudioList);
 	if(sceneTextAudioList[soundIndex]){
 		const sound = new Howl({
 			src: sceneTextAudioList[soundIndex].srcfile,

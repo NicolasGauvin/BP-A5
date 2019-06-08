@@ -17,8 +17,16 @@
     </div>
     <!-- holder for the story (should be hidden) -->
     <div id="story" style="display:none"><scene>
-        <scenedrawing clickable="0" srcfile="/Drawings/test.jpg" x="0" y="0" width="800" height="480"></scenedrawing>
-        <scenedrawing clickable="0" srcfile="/Drawings/missfrom.png" x="1000" y="450" width="195" height="268"></scenedrawing>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_01.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_01.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_01.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
         <variable criterion="character">
           <textstory criterion="renard" text="Il était une fois un petit renard qui s’appelait Milo. Il habitait avec ses parents, dans un joli petit terrier, " srcfile="\audio\milo\1_1_milo_01.mp3"></textstory>
           <textstory criterion="prince" text="Il était une fois, un petit prince qui s’appelait Arthur. Il habitait avec son père, le roi, " srcfile="\audio\arthur\1_1_arthur_01.mp3"></textstory>
@@ -33,6 +41,17 @@
 
       <scene>
         <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_passive_tete_tournee.png" x="550" y="170" width="209" height="224"></scenedrawing>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_surpris.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_surpris_epee_bois.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_surprise_sabre_main.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <variable criterion="context">
           <textstory criterion="foret" text="Un matin, dans la forêt, alors que les écureuils s’amusaient dans les arbres, " srcfile="\audio\foret\2_1_foret_01.mp3"></textstory>
           <textstory criterion="ile" text="Un matin, sur la plage, alors que les mouettes volaient au-dessus de l’eau, " srcfile="\audio\ile\2_1_ile_01.mp3"></textstory>
           <textstory criterion="chateau" text="Un matin, devant le château du roi qui affichait fièrement son étendard , " srcfile="\audio\chateau\2_1_chateau_01.mp3"></textstory>
@@ -45,10 +64,37 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_surpris.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_surpris_epee_bois.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_surprise_sabre_main.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_surpris.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_surpris_epee_bois.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_surprise_sabre_main.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_passive_tete_tournee.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <textstory text="Miss From', c'était le nom de cette souris, était en train de se fabriquer un joli chapeau à l'aide de pétales tombés au pied d'un rosier." srcfile="\audio\fixe\2_2_fixe_01.mp3"></textstory>
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_surpris.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_surpris_epee_bois.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_surprise_sabre_main.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_peur_chapeau_casse.png" x="550" y="210" width="209" height="224"></scenedrawing>
         <variable criterion="character">
           <textstory criterion="renard" text="Sentant un regard posé sur elle, Miss From' se retourna d'un coup, et se retrouvera nez à nez avec un renard." srcfile="audio/milo/2_3_milo_01.mp3"></textstory>
           <textstory criterion="prince" text="Sentant un regard posé sur elle, Miss From' se retourna d'un coup et se retrouvera nez à nez avec un petit prince armé d’une épée." srcfile="audio/arthur/2_3_arthur_01.mp3"></textstory>
@@ -57,10 +103,32 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_peur_chapeau_casse.png" x="550" y="210" width="209" height="224"></scenedrawing>
         <textstory text="« Haaaaaa ! au secours ! cria Miss From'." srcfile="/audio/fixe/2_3_fixe_01.mp3"></textstory>
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_4pattes_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_heureuse_chapeau_casse.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <variable criterion="character">
           <textstory criterion="renard" text="- Oh ! désolée... N'ayez pas peur, jolie souris ! s'écria Milo." srcfile="\audio\milo\2_4_milo_01.mp3"></textstory>
           <textstory criterion="prince" text="- Oh ! désolée... N'ayez pas peur, jolie souris ! s'écria Arthur." srcfile="\audio\arthur\2_4_arthur_01.mp3"></textstory>
@@ -69,18 +137,51 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_parle_chapeau_casse.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <textstory text="- Qui es-tu ? demanda la souris." srcfile="/audio/fixe/2_5_fixe_01.mp3"></textstory>
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_4pattes_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_passive_chapeau_casse.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <variable criterion="character">
           <textstory criterion="renard" text="- Je m'appelle Milo, et j'ai 8 ans. Et vous, comment vous appelez-vous ?" srcfile="/audio/milo/2_6_milo_01.mp3"></textstory>
-          <textstory criterion="price" text="- Je m'appelle Arthur, et je suis le prince du royaume. Et vous, comment vous appelez-vous ?" srcfile="/audio/arthur/2_6_arthur_01.mp3"></textstory>
+          <textstory criterion="prince" text="- Je m'appelle Arthur, et je suis le prince du royaume. Et vous, comment vous appelez-vous ?" srcfile="/audio/arthur/2_6_arthur_01.mp3"></textstory>
           <textstory criterion="pirate" text="- Je m'appelle Lucie, la petite terreur des mers. Et vous, comment vous appelez-vous ?" srcfile="/audio/lucie/2_6_lucie_01.mp3"></textstory>
         </variable>
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_parle_chapeau_casse.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <textstory text="- Je me prénomme Miss From'." srcfile="/audio/fixe/2_7_fixe_01.mp3"></textstory>
         <variable criterion="context">
           <textstory criterion="foret" text="Je vis dans le bois, tout là-bas." srcfile="/audio/foret/2_7_foret_01.mp3"></textstory>
@@ -90,6 +191,17 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_4pattes_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_etonnee_chapeau_casse.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <variable criterion="character">
           <textstory criterion="renard" text="- Puis-je vous aider à terminer votre chapeau ? proposa Milo." srcfile="\audio\milo\2_8_milo_01.mp3"></textstory>
           <textstory criterion="prince" text="- Puis-je vous aider à terminer votre chapeau ? proposa Arthur." srcfile="\audio\arthur\2_8_arthur_01.mp3"></textstory>
@@ -98,10 +210,32 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_02.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_etonnee_chapeau_casse.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <textstory text="- C'est très gentil à toi ! Oui, je te remercie ! répondit la souris, étonnée. »" srcfile="/audio/fixe/2_9_fixe_01.mp3"></textstory>
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif_petales_mains.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif_petales_rose_mains.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive_petales_mains.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_passive_chapeau_casse.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <variable criterion="context">
           <textstory criterion="foret" text="Sur ces mots, ils se dirigèrent tous deux vers une clairière illuminée par le soleil." srcfile="\audio\foret\3_1_foret_01.mp3"></textstory>
           <textstory criterion="ile" text="Sur ces mots, ils se dirigèrent tous deux vers des falaises près des cavernes." srcfile="\audio\ile\3_1_ile_01.mp3"></textstory>
@@ -115,6 +249,17 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif_chapeau_repare.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif_chapeau_repare.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive_chapeau_repare.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_heureuse.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <variable criterion="character">
           <textstory criterion="renard" text="En guise de cordons, pour que Miss From' puisse attacher son chapeau, Milo fixa, sur les côtés, deux brins de ciboulette. Au bout de quelques heures de travail, le résultat était magnifique, et Miss From', enchantée !" srcfile="/audio/milo/3_2_milo_01.mp3"></textstory>
           <textstory criterion="prince" text="En guise de cordons, pour que Miss From' puisse attacher son chapeau, Arthur fixa, sur les côtés, deux brins de ciboulette. Au bout de quelques heures de travail, le résultat était magnifique, et Miss From', enchantée !" srcfile="/audio/arthur/3_2_arthur_01.mp3"></textstory>
@@ -123,6 +268,17 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_4pattes_heureux.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_heureux.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_heureuse.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_parle_chapeau_repare.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <variable criterion="character">
           <textstory criterion="renard" text="« Milo, tu es vraiment très aimable. Que puis-je faire pour te remercier ? » demanda la souris." srcfile="/audio/milo/3_3_milo_01.mp3"></textstory>
           <textstory criterion="prince" text="« Arthur, tu es vraiment très aimable. Que puis-je faire pour te remercier ? » demanda la souris." srcfile="/audio/arthur/3_3_arthur_01.mp3"></textstory>
@@ -131,6 +287,17 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_4pattes_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_parle.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_passive_chapeau_repare.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <variable criterion="context">
           <textstory criterion="foret" text="“Je m’ennuie souvent, je n’ai pas d’ami avec qui jouer dans la forêt”, " srcfile="/audio\foret\3_4_foret_01.mp3"></textstory>
           <textstory criterion="ile" text="“Je m’ennuie souvent, je n’ai pas d’ami avec qui jouer sur la plage”, " srcfile="/audio/ile/3_4_ile_01.mp3"></textstory>
@@ -144,14 +311,47 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_4pattes_heureux.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_heureux.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_heureuse.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_passive_chapeau_repare_sifflet.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <textstory text="« Bien, bien, bien ! Je crois que j'ai une idée... dit Miss From', en sortant de sa poche un sifflet jaune. " srcfile="/audio/fixe/3_5_fixe_01.mp3"></textstory>
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_parle_chapeau_repare.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <textstory text="Je te donne ce sifflet. Prends-en soin ; il est très précieux. Lorsque tu souffleras trois fois dedans, trois fois, n'oublie pas, tu me verras apparaître et je te tiendrai compagnie un moment." srcfile="/audio/fixe/3_5B_fixe_01.mp3"></textstory>
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_heureux_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_heureux_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_heureuse_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_passive_chapeau_repare.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <variable criterion="character">
           <textstory criterion="renard" text="- Oooooh ! merci, merci Miss From' ! s'écria Milo, en sautant de joie." srcfile="/audio/milo/3_6_milo_01.mp3"></textstory>
           <textstory criterion="prince" text="- Oooooh ! merci, merci Miss From' ! s'écria Arthur, en sautant de joie." srcfile="/audio/arthur/3_6_arthur_01.mp3"></textstory>
@@ -161,6 +361,17 @@
 
       <scene>
         <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_03.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_passive_chapeau_repare.png" x="550" y="170" width="209" height="224"></scenedrawing>
+        <variable criterion="context">
           <textstory criterion="foret" text="La nuit commençait à se coucher et on pouvait apercevoir les derniers rayons de soleil à travers les arbres." srcfile="/audio/foret/3_7_foret_01.mp3"></textstory>
           <textstory criterion="ile" text="La nuit commençait à se coucher et on pouvait apercevoir les derniers rayons de soleil briller sur l’eau." srcfile="/audio/ile/3_7_ile_01.mp3"></textstory>
           <textstory criterion="chateau" text="La nuit commençait à se coucher et on pouvait apercevoir les derniers rayons de soleil sur les remparts du château." srcfile="/audio/chateau/3_7_chateau_01.mp3"></textstory>
@@ -168,10 +379,32 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_04.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_04.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_04.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_passif_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_passif_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_passive_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_parle_chapeau_repare.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <textstory text="- Il est temps pour moi de partir. »" srcfile="/audio/fixe/3_8_fixe_01.mp3"></textstory>
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_04.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_04.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_04.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_surpris_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_surpris_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_surprise_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
+        <scenedrawing clickable="0" srcfile="/Drawings/souris/souris_chapeau_repare_nuage_poudre.png" x="550" y="170" width="209" height="224"></scenedrawing>
         <variable criterion="character">
           <textstory criterion="renard" text="Et avant que Milo n'ait pu faire un geste, Miss From' avait disparu dans un nuage de poudre rose…" srcfile="/audio/milo/3_9_milo_01.mp3"></textstory>
           <textstory criterion="prince" text="Et avant que Arthur n'ait pu faire un geste, Miss From' avait disparu dans un nuage de poudre rose…" srcfile="/audio/arthur/3_9_arthur_01.mp3"></textstory>
@@ -180,6 +413,16 @@
       </scene>
 
       <scene>
+        <variable criterion="context">
+          <scenedrawing clickable="0"  criterion="chateau" srcfile="/Drawings/chateau/chateau_environnement_05.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="ile" srcfile="/Drawings/plage/plage_environnement_05.png" x="0" y="0" width="800" height="480"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="foret" srcfile="/Drawings/foret/foret_environnement_05.png" x="0" y="0" width="800" height="480"></scenedrawing>
+        </variable>
+        <variable criterion="character">
+          <scenedrawing clickable="0"  criterion="renard" srcfile="/Drawings/renard/renard_sautille.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="prince" srcfile="/Drawings/prince/prince_sautille_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+          <scenedrawing clickable="0"  criterion="pirate" srcfile="/Drawings/pirate/pirate_sautille_sifflet.png" x="70" y="170" width="225" height="210"></scenedrawing>
+        </variable>
         <variable criterion="character">
           <textstory criterion="renard" text="Milo resta pensif un instant. Puis, en sautillant, il repartit vers son terrier; serrant son sifflet sur son coeur, heureux d'avoir trouvé une amie aussi originale." srcfile="/audio/milo/4_1_milo_01.mp3"></textstory>
           <textstory criterion="prince" text="Arthur resta pensif un instant. Puis, en sautillant, il repartit vers le royaume;  serrant son sifflet sur son coeur, heureux d'avoir trouvé une amie aussi originale." srcfile="/audio/arthur/4_1_arthur_01.mp3"></textstory>

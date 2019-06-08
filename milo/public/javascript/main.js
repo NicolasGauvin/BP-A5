@@ -10,6 +10,7 @@ function setUpStoryHtml(storyPath){
 function setUpScene(){
 	if(queue.drawingQueue[currentScene]){
 		clearScene();
+		console.log(queue.drawingQueue[currentScene]);
 		handleDrawings(queue.drawingQueue[currentScene]);
 		handleText(queue.audioAndTextQueue[currentScene]);
 		handleTextAudio(queue.audioAndTextQueue[currentScene]);
