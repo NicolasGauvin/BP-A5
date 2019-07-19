@@ -1,6 +1,7 @@
 let queue;
 let currentScene = 0;
 let currentMenuAudio = false;
+let isMenuInteractive = true;
 
 //get the html from the story and puts it on the page
 function setUpStoryHtml(storyPath){
@@ -53,64 +54,87 @@ function playSound(audio) {
 }
 
 function splashscreen(){
-	setTimeout(function () {
-		document.getElementById("splashscreen").classList = "fade-out";
-	}, 2000);
-	setTimeout(function () {
-		document.getElementById("splashscreen").style.display = "none";
-		playSound("audio/menus/heros/01_heros.mp3");
-	}, 4000);
+	if(isMenuInteractive){
+		console.log("splash");
+		isMenuInteractive = false;
+		setTimeout(function () {
+			document.getElementById("splashscreen").classList = "fade-out";
+		}, 200);
+		setTimeout(function () {
+			document.getElementById("splashscreen").style.display = "none";
+			playSound("audio/menus/heros/01_heros.mp3");
+			isMenuInteractive = true;
+		}, 2000);
+	}
 }
 
 function step1(){
-	document.getElementById("container").classList = "step1Animation";
-	setTimeout(function () {
-		playSound("audio/menus/heros/01_heros.mp3");
-	}, 500);
+	if(isMenuInteractive){
+		console.log("1");
+		isMenuInteractive = false;
+		document.getElementById("container").classList = "step1Animation";
+		setTimeout(function () {
+			isMenuInteractive = true;
+			playSound("audio/menus/heros/01_heros.mp3");
+		}, 500);
+	}
 }
 
 function step2(choice, audio){
-	if(choice){
-		settings.character = choice;
+	if(isMenuInteractive){
+		console.log("2");
+		isMenuInteractive = false;
+		if(choice){
+			settings.character = choice;
+			playSound(audio);
+			setTimeout(function () {
+				document.getElementById("container").classList = "step2Animation";
+				setTimeout(function () {
+					playSound("audio/menus/lieu/01_lieu.mp3");
+					isMenuInteractive = true;
+				}, 1000);
+			}, 2000);
+		}else{
+			setTimeout(function () {
+				document.getElementById("container").classList = "step2Animation";
+				setTimeout(function () {
+					playSound("audio/menus/lieu/01_lieu.mp3");
+					isMenuInteractive = true;
+				}, 1000);
+			}, 2000);
+		}
+	}
+}
+
+function step3(choice, audio){
+	if(isMenuInteractive){
+		console.log("3");
+		isMenuInteractive = false;
+		settings.context = choice;
 		playSound(audio);
 		setTimeout(function () {
-			document.getElementById("container").classList = "step2Animation";
+			document.getElementById("container").classList = "step3Animation";
 			setTimeout(function () {
-				playSound("audio/menus/lieu/01_lieu.mp3");
-			}, 1000);
-		}, 2000);
-	}else{
-		setTimeout(function () {
-			document.getElementById("container").classList = "step2Animation";
-			setTimeout(function () {
-				playSound("audio/menus/lieu/01_lieu.mp3");
+				playSound("audio/menus/aventure/01_aventure.mp3");
+				isMenuInteractive = true;
 			}, 1000);
 		}, 2000);
 	}
 }
 
-function step3(choice, audio){
-	settings.context = choice;
-	playSound(audio);
-	setTimeout(function () {
-		document.getElementById("container").classList = "step3Animation";
-		setTimeout(function () {
-			playSound("audio/menus/aventure/01_aventure.mp3");
-		}, 1000);
-	}, 2000);
-}
-
 function step4(){
-	playSound("audio/menus/aventure/C_02_missfrom.mp3");
-	setTimeout(function () {
-		document.getElementById("container").classList = "step4Animation";
+	if(isMenuInteractive){
+		console.log("4");
+		isMenuInteractive = false;
+		playSound("audio/menus/aventure/C_02_missfrom.mp3");
 		setTimeout(function () {
-			startStory();
-		}, 1000);
-	}, 2000);
+			document.getElementById("container").classList = "step4Animation";
+			setTimeout(function () {
+				startStory();
+			}, 1000);
+		}, 2000);
+	}
 }
-
-splashscreen();
 
 const socket = io.connect('http://localhost');
 socket.on('button_information', function (data) {
