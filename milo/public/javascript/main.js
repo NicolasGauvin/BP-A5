@@ -18,8 +18,14 @@ function setUpScene(){
 		document.getElementById("sceneTransition").classList = "fade-in-out";
 		setTimeout(function () {
 			clearScene();
+			console.log(queue.drawingQueue.length === currentScene);
 			if(queue.drawingQueue.length === currentScene){
+				console.log("end");
 				document.getElementById("endStory").style.display = "block";
+				document.getElementById("canvasesHolder").style.display = "none";
+				if(currentTextAudio !== null && currentTextAudio !== undefined){
+					currentTextAudio.stop();
+				}
 			}else{
 				handleDrawings(queue.drawingQueue[currentScene]);
 				handleText(queue.audioAndTextQueue[currentScene]);
