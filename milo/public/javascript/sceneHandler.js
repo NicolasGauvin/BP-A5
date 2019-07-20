@@ -73,7 +73,6 @@ function handleText(textList){
 	textList.forEach(function(textElement) {
 		text += textElement.text;
 	});
-	console.log(text);
 	textDiv.innerHTML = text;
 }
 

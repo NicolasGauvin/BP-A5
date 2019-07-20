@@ -18,12 +18,15 @@ function setUpScene(){
 		document.getElementById("sceneTransition").classList = "fade-in-out";
 		setTimeout(function () {
 			clearScene();
-			console.log(queue.drawingQueue[currentScene]);
-			handleDrawings(queue.drawingQueue[currentScene]);
-			handleText(queue.audioAndTextQueue[currentScene]);
-			handleTextAudio(queue.audioAndTextQueue[currentScene]);
-			currentScene++;
-			document.getElementById("sceneTransition").classList = "";
+			if(queue.drawingQueue.length === currentScene){
+				document.getElementById("endStory").style.display = "block";
+			}else{
+				handleDrawings(queue.drawingQueue[currentScene]);
+				handleText(queue.audioAndTextQueue[currentScene]);
+				handleTextAudio(queue.audioAndTextQueue[currentScene]);
+				currentScene++;
+				document.getElementById("sceneTransition").classList = "";
+			}
 		}, 1000);
 	}
 }
@@ -136,7 +139,9 @@ function step4(){
 	}
 }
 
+/*
 const socket = io.connect('http://localhost');
 socket.on('button_information', function (data) {
 	//console.log(data);
 });
+	*/
