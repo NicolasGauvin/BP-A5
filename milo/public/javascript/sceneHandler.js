@@ -1,8 +1,5 @@
 let drawingList = [];
-const canvasesHolder = document.querySelector("#canvasesHolder"),
-	canvasClickListener = document.querySelector("#canvasClickListener"),
-	canvasX = canvasClickListener.offsetLeft,
-	canvasY = canvasClickListener.offsetTop;
+const canvasesHolder = document.querySelector("#canvasesHolder");
 let soundIndex = 0;
 let sceneTextAudioList;
 let currentTextAudio;
@@ -10,10 +7,7 @@ const textDiv = document.querySelector("#text");
 
 //Cleaning the canvas between scenes
 function clearScene(){
-	for (let i =0;i < drawingList.length; i++){
-		clearDrawing(i);
-	}
-	drawingList = [];
+	document.getElementById("canvasesHolder").innerHTML = "";
 }
 
 function clearDrawing(index){
@@ -42,31 +36,6 @@ function addDrawing(drawing, index){
 	};
 	drawingList.push({"drawing":drawing,"canvas":canvas,"context":context});
 }
-
-//triggers event on every click on the  canvas
-canvasClickListener.addEventListener('click', function(event) {
-	//getting position of the click on the canvas
-	const clickX = event.pageX - canvasX,
-		clickY = event.pageY - canvasY;
-	
-	//element that was clicked (we only want the closest one)
-	let clickedElement;
-	
-	//checks if the click is within one of the drawings
-	drawingList.forEach(function(element) {
-		if ((clickY > parseInt(element.drawing.y) && clickY < parseInt(element.drawing.y) + parseInt(element.drawing.height)) && (clickX > parseInt(element.drawing.x) && clickX < parseInt(element.drawing.x) + parseInt(element.drawing.width))) {
-			if(element.drawing.clickable === "1"){
-				clickedElement = element;
-			}
-		}
-	});
-	
-	if(clickedElement !== undefined){
-		console.log("clicked element:");
-		console.log(clickedElement.drawing);
-	}
-	
-}, false);
 
 function handleText(textList){
 	let text = "";
