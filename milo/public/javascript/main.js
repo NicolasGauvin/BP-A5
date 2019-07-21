@@ -18,22 +18,19 @@ function setUpScene(){
 		document.getElementById("sceneTransition").classList = "fade-in-out";
 		setTimeout(function () {
 			clearScene();
-			console.log(queue.drawingQueue.length === currentScene);
-			if(queue.drawingQueue.length === currentScene){
-				console.log("end");
-				document.getElementById("endStory").style.display = "block";
-				document.getElementById("canvasesHolder").style.display = "none";
-				if(currentTextAudio !== null && currentTextAudio !== undefined){
-					currentTextAudio.stop();
-				}
-			}else{
 				handleDrawings(queue.drawingQueue[currentScene]);
 				handleText(queue.audioAndTextQueue[currentScene]);
 				handleTextAudio(queue.audioAndTextQueue[currentScene]);
 				currentScene++;
 				document.getElementById("sceneTransition").classList = "";
-			}
 		}, 1000);
+	}else{
+		document.getElementById("endStory").style.display = "block";
+		document.getElementById("canvasesHolder").style.display = "none";
+		document.getElementById("textBanner").style.display = "none";
+		if(currentTextAudio !== null && currentTextAudio !== undefined){
+			currentTextAudio.stop();
+		}
 	}
 }
 
@@ -64,7 +61,6 @@ function playSound(audio) {
 
 function splashscreen(){
 	if(isMenuInteractive){
-		console.log("splash");
 		isMenuInteractive = false;
 		setTimeout(function () {
 			document.getElementById("splashscreen").classList = "fade-out";
@@ -79,7 +75,6 @@ function splashscreen(){
 
 function step1(){
 	if(isMenuInteractive){
-		console.log("1");
 		isMenuInteractive = false;
 		document.getElementById("container").classList = "step1Animation";
 		setTimeout(function () {
@@ -91,7 +86,6 @@ function step1(){
 
 function step2(choice, audio){
 	if(isMenuInteractive){
-		console.log("2");
 		isMenuInteractive = false;
 		if(choice){
 			settings.character = choice;
@@ -117,7 +111,6 @@ function step2(choice, audio){
 
 function step3(choice, audio){
 	if(isMenuInteractive){
-		console.log("3");
 		isMenuInteractive = false;
 		settings.context = choice;
 		playSound(audio);
@@ -133,7 +126,6 @@ function step3(choice, audio){
 
 function step4(){
 	if(isMenuInteractive){
-		console.log("4");
 		isMenuInteractive = false;
 		playSound("audio/menus/aventure/C_02_missfrom.mp3");
 		setTimeout(function () {
