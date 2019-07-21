@@ -57,7 +57,6 @@ function playTextAudio(){
 			onend: function() {
 				soundIndex++;
 				playTextAudio();
-				currentTextAudio = null;
 			}
 		});
 		currentTextAudio = sound;

@@ -59,8 +59,17 @@ function playSound(audio) {
 	currentMenuAudio = sound;
 }
 
+function playQuickSound(audio) {
+	const sound = new Howl({
+		src: audio,
+		volume:0.75
+	});
+	sound.play();
+}
+
 function splashscreen(){
 	if(isMenuInteractive){
+		playQuickSound("audio/sfui/choix_B3.mp3");
 		isMenuInteractive = false;
 		setTimeout(function () {
 			document.getElementById("splashscreen").classList = "fade-out";
@@ -86,54 +95,63 @@ function step1(){
 
 function step2(choice, audio){
 	if(isMenuInteractive){
+		playQuickSound("audio/sfui/choix_B1.mp3");
 		isMenuInteractive = false;
-		if(choice){
-			settings.character = choice;
-			playSound(audio);
-			setTimeout(function () {
-				document.getElementById("container").classList = "step2Animation";
+		setTimeout(function () {
+			if(choice){
+				settings.character = choice;
+				playSound(audio);
 				setTimeout(function () {
-					playSound("audio/menus/lieu/01_lieu.mp3");
-					isMenuInteractive = true;
-				}, 1000);
-			}, 2000);
-		}else{
-			setTimeout(function () {
-				document.getElementById("container").classList = "step2Animation";
+					document.getElementById("container").classList = "step2Animation";
+					setTimeout(function () {
+						playSound("audio/menus/lieu/01_lieu.mp3");
+						isMenuInteractive = true;
+					}, 1000);
+				}, 2000);
+			}else{
 				setTimeout(function () {
-					playSound("audio/menus/lieu/01_lieu.mp3");
-					isMenuInteractive = true;
-				}, 1000);
-			}, 2000);
-		}
+					document.getElementById("container").classList = "step2Animation";
+					setTimeout(function () {
+						playSound("audio/menus/lieu/01_lieu.mp3");
+						isMenuInteractive = true;
+					}, 1000);
+				}, 2000);
+			}
+		}, 750);
 	}
 }
 
 function step3(choice, audio){
 	if(isMenuInteractive){
+		playQuickSound("audio/sfui/choix_B2.mp3");
 		isMenuInteractive = false;
 		settings.context = choice;
-		playSound(audio);
 		setTimeout(function () {
-			document.getElementById("container").classList = "step3Animation";
+			playSound(audio);
 			setTimeout(function () {
-				playSound("audio/menus/aventure/01_aventure.mp3");
-				isMenuInteractive = true;
-			}, 1000);
-		}, 2000);
+				document.getElementById("container").classList = "step3Animation";
+				setTimeout(function () {
+					playSound("audio/menus/aventure/01_aventure.mp3");
+					isMenuInteractive = true;
+				}, 1000);
+			}, 2000);
+		}, 750);
 	}
 }
 
 function step4(){
 	if(isMenuInteractive){
+		playQuickSound("audio/sfui/choix_B3.mp3");
 		isMenuInteractive = false;
-		playSound("audio/menus/aventure/C_02_missfrom.mp3");
 		setTimeout(function () {
-			document.getElementById("container").classList = "step4Animation";
+			playSound("audio/menus/aventure/C_02_missfrom.mp3");
 			setTimeout(function () {
-				startStory();
-			}, 1000);
-		}, 2000);
+				document.getElementById("container").classList = "step4Animation";
+				setTimeout(function () {
+					startStory();
+				}, 1000);
+			}, 2000);
+		}, 750);
 	}
 }
 
