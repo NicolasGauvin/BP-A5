@@ -1,6 +1,11 @@
 body{
 	margin:0;
 	font-family: Open Sans;
+
+}
+
+html{
+	overflow-y:hidden
 }
 
 canvas{
@@ -30,14 +35,14 @@ form{
 #text{
 	width: 500px;
 	height: 70px;
-	top: 20PX;
+	top: 10px;
 	position: absolute;
 	font-size: 15px;
 }
 
 .center {
 	margin: auto;
-	width: 500px;
+	width: 550px;
 	position: absolute;
 	left: 150px;
 	height: 90px;
@@ -56,16 +61,17 @@ form{
 	height: 1920px;
 	position: absolute;
 	transition: transform 0.5s;
+	right:0;
 }
 
 .step{
-	width: 100%;
+	width: 800px;
 	height: 480px;
 	position: absolute;
 }
 
 #step1{
-	top:0px;
+	top:0;
 }
 #step2{
 	top:480px;
