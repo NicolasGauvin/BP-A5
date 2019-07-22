@@ -6,7 +6,7 @@ body{
 
 html{
 	overflow-y:hidden;
-	cursor: url(empty.png), alias;
+	cursor: none;
 }
 
 canvas{
