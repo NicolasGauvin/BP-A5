@@ -5,8 +5,8 @@ body{
 }
 
 html{
-	/*overflow-y:hidden;*/
-	/*cursor: none;*/
+	overflow-y:hidden;
+	cursor: url(empty.png), alias;
 }
 
 canvas{
