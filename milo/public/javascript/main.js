@@ -62,7 +62,7 @@ function playSound(audio) {
 function playQuickSound(audio) {
 	const sound = new Howl({
 		src: audio,
-		volume:0.75
+		volume:0.25
 	});
 	sound.play();
 }
